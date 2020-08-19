@@ -5,5 +5,8 @@ Pull frequently to make sure you're up to date, but know that we'll make an anno
 
 ## Changelog
 
+- Tuesday, August 18 at 11:47 PM
+    - Add homework 1 resources
+    - Good luck
 - Tuesday, August 18 at 5:37 PM
     - Add a README.md lmao

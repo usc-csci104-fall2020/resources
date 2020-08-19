@@ -1,0 +1,33 @@
+Constructor and insertion and extraction operators:
+0/1
+-1/5
+-9/5 7/3 1/2
+Addition checks: 
+-2/1
+1/5
+1/5
+Multiplication checks: 
+-21/5
+14/1
+14/1
+Exponentiation checks: 
+1/8
+4/1
+1/1
+Equal checks: 
+1
+0
+Not Equal checks: 
+0
+1
+Less-than checks: 
+1
+0
+1
+Assignment checks: 
+0/1
+11/2
+-1/10
+3/2
+Normalized 0 check: 
+0/1
