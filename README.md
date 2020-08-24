@@ -5,6 +5,9 @@ Pull frequently to make sure you're up to date, but know that we'll make an anno
 
 ## Changelog
 
+- Monday, August 24 at 4:36 PM
+    - Add the GDB lab resources
+    - Thanks Jamie!
 - Tuesday, August 18 at 11:47 PM
     - Add homework 1 resources
     - Good luck
