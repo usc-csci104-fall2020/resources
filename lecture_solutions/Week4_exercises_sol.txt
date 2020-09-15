@@ -1,5 +1,6 @@
 1. The List implementation was more efficient in terms of runtime than the vector implementation. The reason for this is that to remove the first element in a doubly linked list 
 takes constant time whereas it takes linear time in a vector or array because all other elements must be copied.
+
 2.  paren.cpp
 bool isParenthesized(string expr) {
     stack<char> s;
