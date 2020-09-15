@@ -1,0 +1,99 @@
+1. The List implementation was more efficient in terms of runtime than the vector implementation. The reason for this is that to remove the first element in a doubly linked list 
+takes constant time whereas it takes linear time in a vector or array because all other elements must be copied.
+2.  paren.cpp
+bool isParenthesized(string expr) {
+    stack<char> s;
+    size_t i = 0, len = expr.length();
+    while (i < len){
+        if (expr[i] == '(' || expr[i]=='[') {
+          s.push(expr[i]);
+        } 
+        if (expr[i] == ')' || expr[i] == ']'){
+            if (s.empty()) return false;
+            char t = s.top();
+            if ((expr[i]== ')' && t != '(') || (expr[i]==']' && t != '[')) {
+                return false;
+            }
+            s.pop();
+        } 
+        i++;
+    }
+    return s.empty();
+}
+
+
+
+3. eval.cpp
+
+//double evaluate(string exp);
+/** evaluate(“( ( 5 * 4 ) * (  2 + 3 ) )”) should return the value 100.0 **/
+/** evaluate(“(  (1 + ( 5 * ( 3 + 1 ) ) ) / 4 )”) should return the value 5.25 **/
+
+// This code is ported to C++ from Java on pg 129 of the following reference:
+// Robert Sedgewick and Kevin Wayne. 2015. Algorithms, Fourth Edition. Addison-Wesley Professional.
+
+double evaluate(string expr){
+    stringstream s(expr);
+    string current_token;
+    stack<string> ops;
+    stack<double> vals;
+    
+    while (s >> current_token){
+        if (current_token == "(") {
+            continue;
+        } else if(current_token == "+" || current_token == "-" || 
+                  current_token == "*" || current_token == "/") {
+            ops.push(current_token);
+        } else if (current_token == ")"){
+            string op = ops.top();
+            ops.pop();
+            double v1 = vals.top();
+            vals.pop();
+            double v2 = vals.top();
+            vals.pop();
+            if (op == "+") v1 += v2;
+            else if (op == "*") v1 *= v2;
+            else if (op == "-") v1 = v2 -v1;
+            else if (op == "/") v1 = v2/v1;
+            vals.push(v1);
+        } else {
+            stringstream pd(current_token);
+            double v;
+            pd >> v;
+            cout << v << endl;
+            vals.push(v);
+        }
+        
+    }
+    
+    return vals.top();
+}
+
+
+
+
+4. DoubleList solution
+
+// Destructor. Should delete all data allocated by the list. 
+DoubleLL::~DoubleLL(){
+    while(!this->empty()){
+           this->remove(tail);
+    }
+
+}
+
+void DoubleLL::remove(std::shared_ptr<Item> p){
+     if (!p) return;
+     if (p != head) {
+        p->prev->next = p->next;
+     } else {
+       head = p->next;
+     }
+     if (p != tail) {
+       p->next->prev = p->prev;
+     } else {
+       tail = p->prev;
+     }
+     count--;
+     std::cout << p.use_count() << std::endl;
+}
