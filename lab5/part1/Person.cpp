@@ -13,6 +13,7 @@ std::string Person::getName() {
 
 Professor::Professor(std::string name, std::string department) {
 	mName = name;
+	mDepartment = department;
 }
 
 std::string Professor::getDepartment() {
@@ -21,6 +22,7 @@ std::string Professor::getDepartment() {
 
 Student::Student(std::string name, std::string major) {
 	mName = name;
+	mMajor = major;
 }
 
 void Student::setGPA(double gpa) {
