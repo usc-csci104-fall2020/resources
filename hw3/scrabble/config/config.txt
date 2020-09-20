@@ -1,0 +1,6 @@
+hand_size: 7
+minimum_word_length: 2
+seed: 54
+tile_bag: config/english-tile-bag.txt
+dictionary: config/english-dictionary.txt
+board: config/standard-board.txt

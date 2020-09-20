@@ -1,0 +1,24 @@
+3
+playerA
+playerB
+playerC
+PLACE - 8 8 DIM
+
+PLACE | 8 11 S
+
+PLACE | 9 11 HIP
+
+EXCHANGE HIZ
+
+EXCHANGE EEE
+
+EXCHANGE RV
+
+PLACE | 7 9 VO?LA
+
+PASS
+
+PASS
+
+PASS
+
