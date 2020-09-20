@@ -15,27 +15,27 @@
 
 using namespace std;
 
-// Given to you and does not need to be changed
+
+// This method is fully implemented.
 inline string& to_upper(string& str) {
     transform(str.begin(), str.end(), str.begin(), ::toupper);
     return str;
 }
 
 Move HumanPlayer::get_move(const Board& board, const Dictionary& dictionary) const {
-	// Begin your implementation here
+	// TODO: begin your implementation here.
 }
 
 vector<TileKind> HumanPlayer::parse_tiles(string& letters) const{
-    // Begin implementation here
+    // TODO: begin implementation here.
 }
 
 Move HumanPlayer::parse_move(string& move_string) const {
-	// Begin implementation here
+	// TODO: begin implementation here.
 }
 
 
-// Given to you and does not need to be changed
-// PLEASE DO NOT CHANGE THIS FUNCTION
+// This function is fully implemented.
 void HumanPlayer::print_hand(ostream& out) const {
 	const size_t tile_count = tiles.count_tiles();
 	const size_t empty_tile_count = this->get_hand_size() - tile_count;

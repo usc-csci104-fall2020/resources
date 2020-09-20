@@ -3,6 +3,7 @@
 
 using namespace std;
 
+
 void TileCollection::add_tile(TileKind kind) {
     this->add_tiles(kind, 1);
 }
@@ -81,7 +82,7 @@ TileCollection::const_iterator::self_type TileCollection::const_iterator::operat
 }
 
 TileCollection::const_iterator::self_type TileCollection::const_iterator::operator++(int junk){
-	(void)junk; // supress unused var warning
+	(void)junk;  // Suppress unused variable warning.
     self_type i = *this;
     operator++();
     return i;

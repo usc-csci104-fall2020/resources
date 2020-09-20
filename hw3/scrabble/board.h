@@ -29,24 +29,25 @@ public:
 
     Position start;
 
-    static Board read(const std::string& file_path); // Used for testing
+    static Board read(const std::string& file_path);
 
     size_t get_move_index() const;
-    
+
     // Test_place should verify that the move given as an argument can be placed on the board
     // It should return a valid PlaceResult object with appropriate words if so
     // and an invalid PlaceResult object with error message otherwise.
     PlaceResult test_place(const Move& move) const;
-    
-    
-    // If the move given is valid and can be placed on the board
-    // place will make the changes to the board for the move and return the PlaceResult object
-    // for the move
-    // If the move is valid, the PlaceResult will be valid and contain the correct values for word and points
-    // If not, the PlaceResult will not be valid and contain an error message.
-    PlaceResult place(const Move& move); // Used for testing - remember that the move struct should use 0 based indexing, NOT 1 based
-                                         // This is because the move struct uses C++ indexing that starts with 0 whereas 
-                                         // the game uses 1 based indexing for human players
+
+    // If the move given is valid and can be placed on the board, this method
+    // will make the changes to the board for the move and return the
+    // PlaceResult object. The result returned by this method should be exactly
+    // what test_place would return, so consider simply using test_place then
+    // modifying the board.
+    PlaceResult place(const Move& move);
+
+    // Remember that the move struct should use 0-based indexing, not 1-based.
+    // This is because the move struct uses C++ indexing, which starts with 0,
+    // whereas the game uses 1 based indexing for human players
 
     void print(std::ostream& out) const;
 

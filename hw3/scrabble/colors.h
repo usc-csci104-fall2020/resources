@@ -1,10 +1,6 @@
-//
-// Scrabble Color Settings
-//
-
-// DOES NOT NEED TO BE CHANGED
 #ifndef COLORS_H
 #define COLORS_H
+
 
 #define MOVE_PROMPT_COLOR rang::fgB::blue << rang::style::bold
 #define PLAYER_NAME_COLOR rang::fgB::red << rang::style::bold

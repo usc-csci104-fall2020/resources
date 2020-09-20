@@ -4,7 +4,6 @@
 #include <vector>
 #include <string>
 
-// Provided for you
 
 struct PlaceResult {
     bool valid;

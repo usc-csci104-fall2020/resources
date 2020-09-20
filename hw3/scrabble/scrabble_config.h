@@ -4,7 +4,7 @@
 #include <string>
 #include <cstdint>
 
-// FULLY IMPLEMENTED
+
 class ScrabbleConfig {
 public:
     uint32_t seed;

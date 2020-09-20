@@ -22,8 +22,7 @@ Dictionary Dictionary::read(const std::string& file_path) {
     std::string word;
     Dictionary dictionary;
 
-    // TODO: Complete this
-    // words in dictionary should all be lowercase. 
+    // TODO: complete this. Words in dictionary should all be lowercase.
 
     return dictionary;
 }

@@ -5,7 +5,6 @@
 #include <stdexcept>
 #include <string>
 
-// PROVIDED FOR YOU TO BE USED FOR ERROR CONDITIONS FOR TESTING
 
 class FileException : public std::runtime_error {
 public:

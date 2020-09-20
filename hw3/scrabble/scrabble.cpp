@@ -6,6 +6,7 @@
 
 using namespace std;
 
+
 // Given to you. this does not need to be changed
 Scrabble::Scrabble(const ScrabbleConfig& config)
     : hand_size(config.hand_size)
@@ -15,35 +16,26 @@ Scrabble::Scrabble(const ScrabbleConfig& config)
     , dictionary(Dictionary::read(config.dictionary_file_path)) {}
 
 
-/*
-Game Loop should cycle through players and get and execute that players move until the game is over.
-*/
+// Game Loop should cycle through players and get and execute that players move
+// until the game is over.
 void Scrabble::game_loop() {
-    // Useful cout expressions with fancy colors. Expressions in curly braces, indicate values you supply.
+    // TODO: implement this.
 
+    // Useful cout expressions with fancy colors. Expressions in curly braces, indicate values you supply.
     // cout << "You gained " << SCORE_COLOR << {points} << rang::style::reset << " points!" << endl;
     // cout << "Your current score: " << SCORE_COLOR << {points} << rang::style::reset << endl;
     // cout << endl << "Press [enter] to continue.";
 }
 
-/*
-Performs final subtraction. 
-
-Players lose points for each tile in their hand.
-The player who cleared their hand receives all the points lost by the other players.
-*/
-// DO NOT CHANGE FUNCTION SIGNATURE (Needed for testing)
+// Performs final score subtraction. Players lose points for each tile in their
+// hand. The player who cleared their hand receives all the points lost by the
+// other players.
 void Scrabble::final_subtraction(vector<shared_ptr<Player>> & plrs) {
-
-
+    // TODO: implement this method.
+    // Do not change the method signature.
 }
 
-
-
-
-
-// Given to you! 
-// You should not need to change this function
+// You should not need to change this function.
 void Scrabble::print_result() {
 	// Determine highest score
     size_t max_points = 0;
@@ -79,11 +71,10 @@ void Scrabble::print_result() {
 	}
 }
 
-// Given to you
-// You should not need to change this
+// You should not need to change this.
 void Scrabble::main() {
     add_players();
     game_loop();
-    final_subtraction(players);
+    final_subtraction(this->players);
     print_result();
 }

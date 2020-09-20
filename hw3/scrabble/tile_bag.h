@@ -8,7 +8,7 @@
 #include <string>
 #include <random>
 
-// FULLY IMPLEMENTED
+
 class TileBag : public TileCollection {
 public:
     static TileBag read(std::string file_path, uint32_t seed);

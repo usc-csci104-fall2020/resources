@@ -3,6 +3,7 @@
 
 #include <cctype>
 
+
 struct TileKind {
     unsigned short points;
     char letter;
@@ -10,12 +11,12 @@ struct TileKind {
 
     static const char BLANK_LETTER = '?';
 
-    TileKind(char letter, unsigned short points) : 
-        points(points), 
+    TileKind(char letter, unsigned short points) :
+        points(points),
         letter(std::tolower(letter)),
         assigned('\0') {}
-    TileKind(char letter, unsigned short points, char assigned) : 
-        points(points), 
+    TileKind(char letter, unsigned short points, char assigned) :
+        points(points),
         letter(std::tolower(letter)),
         assigned(std::tolower(assigned)) {};
 };

@@ -5,9 +5,9 @@
 
 using namespace std;
 
-// You may use this code as is for testing although you may want to write
-// other driver programs for unit testing different parts of the game
 
+// You may use this code as is for testing although you may want to write
+// other driver programs for unit testing different parts of the game.
 int main(int argc, char** argv) {
     if (argc != 2) {
         std::cerr << "Usage: " << argv[0] << " <configuration file>" << std::endl;

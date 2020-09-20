@@ -3,8 +3,6 @@
 
 #include "tile_kind.h"
 
-// FULLY IMPLEMENTED - You need only know how to use the public 
-// data and functions
 
 class BoardSquare {
 public:

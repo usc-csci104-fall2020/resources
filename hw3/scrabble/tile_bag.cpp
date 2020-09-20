@@ -29,8 +29,6 @@ TileBag TileBag::read(std::string file_path, uint32_t seed) {
     return bag;
 }
 
-// sandra implementing suggestion from elan
-//void TileBag::transfer_random_tiles(TileCollection& recipient, size_t n) {
 std::vector<TileKind> TileBag::remove_random_tiles(size_t count) {
     size_t total_count = this->count_tiles();
 
@@ -48,7 +46,6 @@ std::vector<TileKind> TileBag::remove_random_tiles(size_t count) {
         }
     }
 
-    //cerr << result.size() << endl;
     return result;
 }
 

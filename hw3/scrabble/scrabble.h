@@ -25,7 +25,7 @@ public:
     static void final_subtraction(std::vector<std::shared_ptr<Player>>& players); // public for testing
 
 private:
-    // You add more private members
+    // TODO: you may add more private members.
 
     size_t hand_size;
     size_t minimum_word_length;

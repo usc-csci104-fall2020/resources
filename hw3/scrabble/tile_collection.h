@@ -6,7 +6,6 @@
 #include <vector>
 
 
-// FULLY IMPLEMENTED
 typedef std::map<TileKind, size_t> TileMap;
 
 class TileCollection {
@@ -19,7 +18,7 @@ public:
     void remove_tile(TileKind kind);
     void remove_tiles(TileKind kind, size_t n);
 
-    TileKind lookup_tile(char letter) const; 
+    TileKind lookup_tile(char letter) const;
 
     size_t count_tiles() const;
     size_t count_tiles(TileKind kind) const;

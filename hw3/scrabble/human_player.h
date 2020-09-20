@@ -9,7 +9,6 @@
 #include "player.h"
 
 
-
 class HumanPlayer : public Player {
 public:
     HumanPlayer(const std::string& name, size_t hand_size) : Player(name, hand_size) {}

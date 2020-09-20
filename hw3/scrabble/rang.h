@@ -1,9 +1,5 @@
-//
 // Rang library, copied from https://github.com/agauniyal/rang
-// STUDENTS: this file is a utility used by ConsolePrinter for providing colors in the
-// terminal printout.  You can safely ignore it and it doesn't contain anything you have
-// to implement.
-//
+// You can ignore this file, it is used for printing to the console in color.
 
 #ifndef RANG_DOT_HPP
 #define RANG_DOT_HPP

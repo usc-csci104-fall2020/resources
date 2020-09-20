@@ -1,5 +1,6 @@
 #include "board_square.h"
 
+
 bool BoardSquare::has_tile() const {
     return this->tile;
 }

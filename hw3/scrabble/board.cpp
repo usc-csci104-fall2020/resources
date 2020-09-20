@@ -41,7 +41,7 @@ Board Board::read(const string& file_path) {
     file >> rows >> columns >> starting_row >> starting_column;
     Board board(rows, columns, starting_row, starting_column);
 
- // Complete implementation of reading in board from file here.
+    // TODO: complete implementation of reading in board from file here.
 
     return board;
 }
@@ -51,17 +51,14 @@ size_t Board::get_move_index() const {
 }
 
 PlaceResult Board::test_place(const Move& move) const {
-// Complete implementation here
-   
+    // TODO: complete implementation here
 }
 
 PlaceResult Board::place(const Move& move) {
-    // Complete implementation here
+    // TODO: Complete implementation here
 }
 
-
-
-// PROVIDED FOR YOU - No need to change any functions below
+// The rest of this file is provided for you. No need to make changes.
 
 BoardSquare& Board::at(const Board::Position& position) {
     return this->squares.at(position.row).at(position.column);
@@ -159,7 +156,7 @@ void Board::print(ostream& out) const {
 		}
 	}
 
-	// draw bottom line
+	// Draw bottom line
 	out << repeat(SPACE, BOARD_LEFT_MARGIN);
 	print_horizontal(this->columns, L_BOTTOM_LEFT, T_UP, L_BOTTOM_RIGHT, out);
 	out << endl << rang::style::reset << std::endl;
