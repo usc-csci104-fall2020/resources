@@ -54,3 +54,38 @@ int main(int argc, char *argv[])
       }
           
    }
+
+
+
+
+   
+  vector<pair<int,int>> v_zm;
+
+  cout << "Zip code, occurrence table" << endl;
+  // Print table of the zip codes with occurrences
+  for(map<int,int>::iterator it = zip_map.begin(); 
+      it != zip_map.end(); 
+      ++it)
+    {
+      cout << it->first << " occurs " << it->second << " times" << endl;
+      v_zm.push_back(*it);
+    }
+
+   sort(v_zm.begin(), v_zm.end(), zip_comp);
+   size_t l =v_zm.size();
+   cout << v_zm[l-1].first << " " << v_zm[l-1].second << endl;
+   sort(v_zm.begin(), v_zm.end(), occ_comp);
+   cout << v_zm[l-1].first << " " << v_zm[l-1].second << endl;
+
+ // sort the zip codes
+
+  sort(all_zips.begin(), all_zips.end());
+
+// figure out the number of occurrences of the first zip code in sorted order 
+//without using the map
+  cout << "occurrences of zip code " << all_zips[0] << " : " << count(all_zips.begin(), all_zips.end(), all_zips[0]) << endl;
+
+  return 0;
+  
+}
+
