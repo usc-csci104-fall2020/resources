@@ -76,7 +76,7 @@ For each of these descriptions, indicate what ADT is appropriate to store the fo
 
 - Data structure to store the content of each line of code in a possibly long C++ program. **`list<string>` where the index corresponds to a line number in the code**
 
-- A data structure that allows you to input an academic semester and find all students who earned an A in CS104 that semester. **`map<string, vector<int> >` where string is the term and int is a USC ID**
+- A data structure that allows you to input an academic semester and find all students who earned an A in CS104 that semester. **`map<string, list<int> >` where string is the term and int is a USC ID**
 
 ### STL
 #### Example of Using STL Stack
