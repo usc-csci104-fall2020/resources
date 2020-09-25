@@ -435,3 +435,8 @@ int main() {
 ```
 
 **Solution:** The base class should not be the runtime type here if the sub class destructor is to be called. 
+
+Also if this code was compiled you would get the following errors:
+main.cpp: In function ‘int main()’:
+ error: invalid conversion from ‘BaseClass*’ to ‘SubClass*’ [-fpermissive]
+  SubClass* s = new BaseClass;
