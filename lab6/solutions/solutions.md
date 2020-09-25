@@ -398,7 +398,9 @@ class Brain : protected LimitedList<std::string>
 		Brain (int capacity) : LimitedList<std::string>(capacity) {}
 		
 		void remember (const string & fact) {
-			this->remove(this->get(fact)); 
+		        int loc = find(fact);
+			if (loc == -1) return;
+			this->remove(loc); 
 			this->insert(0, fact); 
 		}
 
