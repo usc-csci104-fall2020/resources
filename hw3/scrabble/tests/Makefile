@@ -2,11 +2,13 @@ STU_PATH = ..
 
 BIN_DIR = bin
 CC = g++
-CPPFLAGS = -Wall -g -I$(STU_PATH)
+CPPFLAGS = -Wall -g -I$(STU_PATH) --std=c++17
 GTEST_LL = -I /usr/local/opt/gtest/include/ -l gtest -l gtest_main -pthread
 
-all: $(BIN_DIR)/.dirstamp scrabble_test
-	./scrabble_test
+all: $(BIN_DIR)/.dirstamp run_scrabble_test
+
+run_scrabble_test: scrabble_test
+	valgrind --tool=memcheck --leak-check=yes ./scrabble_test
 
 scrabble_test: scrabble_test.cpp $(BIN_DIR)/human_player.o $(BIN_DIR)/player.o $(BIN_DIR)/scrabble_config.o $(BIN_DIR)/dictionary.o $(BIN_DIR)/board.o  $(BIN_DIR)/board_square.o $(BIN_DIR)/move.o $(BIN_DIR)/tile_bag.o $(BIN_DIR)/tile_collection.o $(BIN_DIR)/tile_kind.o $(BIN_DIR)/formatting.o $(BIN_DIR)/scrabble.o
 	$(CC) $(CPPFLAGS) $^ $(GTEST_LL) -o $@
@@ -51,7 +53,7 @@ $(BIN_DIR)/.dirstamp:
 	-@mkdir -p $(BIN_DIR)
 	-@touch $@
 
-.PHONY: clean
+.PHONY: clean run_scrabble_test
 clean:
 	rm -rf $(BIN_DIR)
 	rm scrabble_test
