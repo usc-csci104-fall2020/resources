@@ -12,7 +12,7 @@ T& median_of_three(T& a, T& b, T& c, TComparator comparator) {
 
 template<class T, class TComparator>
 size_t partition(std::vector<T>& vec, TComparator& comparator, size_t low, size_t high) {
-	// TODO: implement.
+	  // TODO: implement.
 }
 
 template<class T, class TComparator>

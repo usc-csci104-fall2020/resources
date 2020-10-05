@@ -43,14 +43,14 @@ public:
 
 template<class T, class TComparator>
 const T& Heap<T, TComparator>::top() const {
-	// If nothing to top:
-	// throw std::logic_error("can't top an empty heap");
+    // If nothing to top:
+    // throw std::logic_error("can't top an empty heap");
 }
 
 template<class T, class TComparator>
 void Heap<T, TComparator>::pop() {
-	// If nothing to pop
-	// throw std::logic_error("can't pop an empty heap");
+    // If nothing to pop
+    // throw std::logic_error("can't pop an empty heap");
 }
 
 #endif
