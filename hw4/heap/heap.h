@@ -29,7 +29,7 @@ public:
     // returns true if the heap is empty
     bool empty() const;
 
-public:
+private:
     // Add whatever helper functions and data members you need below
 
     // heapify() helper function
