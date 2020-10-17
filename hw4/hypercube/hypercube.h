@@ -48,11 +48,11 @@ public:
     // set of nodes it lists. Do not change the signature.
     void read(std::istream& input);
 
-    // TODO: take the starting node label string and return a vector of strings
+    // TODO: take the starting node label string and return a Search Result struct
+    // The path vector in the Search Result
     // containing the node labels on the optimal path from the starting node to
-    // the ending node. If not path is found, the returned vector should
-    // contain the string "no path". The last string in the returned vector
-    // should otherwise be the number of expansions.
+    // the ending node. If not path is found,  the path vector will be empty.
+    // The Search Result expansions should be set to the number of expansions.
     SearchResult search(const std::string& start) const;
 
 private:
