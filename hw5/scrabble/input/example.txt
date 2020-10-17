@@ -1,0 +1,18 @@
+4
+playerA
+n
+playerB
+n
+playerC
+y
+playerD
+y
+PLACE - 8 8 DIM
+
+PLACE | 7 9 J?NX
+
+
+
+PASS
+
+PASS
