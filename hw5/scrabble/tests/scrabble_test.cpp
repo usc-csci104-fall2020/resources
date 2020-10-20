@@ -665,7 +665,7 @@ TEST_F(ComputerPlayerTest, simple_no_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
-	test_pts(res, 28);
+	test_pts(res, 31);
 }
 
 TEST_F(ComputerPlayerTest, simple_no_multipliers_one_blank) {
@@ -689,7 +689,7 @@ TEST_F(ComputerPlayerTest, simple_no_multipliers_one_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
-	test_pts(res, 27);
+	test_pts(res, 29);
 }
 
 TEST_F(ComputerPlayerTest, simple_with_multipliers_no_blank) {
@@ -713,7 +713,7 @@ TEST_F(ComputerPlayerTest, simple_with_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
-	test_pts(res, 35);
+	test_pts(res, 40);
 }
 
 TEST_F(ComputerPlayerTest, simple_with_multipliers_one_blank) {
@@ -737,7 +737,7 @@ TEST_F(ComputerPlayerTest, simple_with_multipliers_one_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
-	test_pts(res, 33);
+	test_pts(res, 38);
 }
 
 TEST_F(ComputerPlayerTest, two_words_no_multipliers_no_blank) {
@@ -761,7 +761,7 @@ TEST_F(ComputerPlayerTest, two_words_no_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
-	test_pts(res, 26);
+	test_pts(res, 28);
 }
 
 TEST_F(ComputerPlayerTest, two_words_no_multipliers_one_blank) {
@@ -785,7 +785,7 @@ TEST_F(ComputerPlayerTest, two_words_no_multipliers_one_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
-	test_pts(res, 21);
+	test_pts(res, 24);
 }
 
 TEST_F(ComputerPlayerTest, two_words_with_multipliers_no_blank) {
@@ -809,7 +809,7 @@ TEST_F(ComputerPlayerTest, two_words_with_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
-	test_pts(res, 35);
+	test_pts(res, 39);
 }
 
 TEST_F(ComputerPlayerTest, two_words_with_multipliers_one_blank) {
@@ -833,7 +833,7 @@ TEST_F(ComputerPlayerTest, two_words_with_multipliers_one_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
-	test_pts(res, 31);
+	test_pts(res, 38);
 }
 
 TEST_F(ComputerPlayerTest, long_no_multipliers_no_blank) {
@@ -857,7 +857,7 @@ TEST_F(ComputerPlayerTest, long_no_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);		
-	test_pts(res, 31);
+	test_pts(res, 32);
 }
 
 TEST_F(ComputerPlayerTest, long_with_multipliers_no_blank) {
@@ -881,7 +881,7 @@ TEST_F(ComputerPlayerTest, long_with_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
-	test_pts(res, 43);
+	test_pts(res, 47);
 }
 
 TEST_F(ComputerPlayerTest, concave_words_no_multipliers_no_blank) {
@@ -929,7 +929,7 @@ TEST_F(ComputerPlayerTest, concave_words_no_multipliers_one_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
-	test_pts(res, 29);
+	test_pts(res, 37);
 }
 
 TEST_F(ComputerPlayerTest, concave_words_with_multipliers_no_blank) {
@@ -977,7 +977,7 @@ TEST_F(ComputerPlayerTest, concave_words_with_multipliers_one_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
-	test_pts(res, 47);
+	test_pts(res, 57);
 }
 
 TEST_F(ComputerPlayerTest, stress_test) {
@@ -1004,6 +1004,6 @@ TEST_F(ComputerPlayerTest, stress_test) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
-	test_pts(res, 51);
+	test_pts(res, 56);
 }
 
