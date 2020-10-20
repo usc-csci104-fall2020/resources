@@ -1004,6 +1004,6 @@ TEST_F(ComputerPlayerTest, stress_test) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
-	test_pts(res, 56);
+	test_pts(res, 57);
 }
 
