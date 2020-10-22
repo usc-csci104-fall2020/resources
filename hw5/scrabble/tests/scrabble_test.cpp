@@ -105,6 +105,17 @@ TEST_F(DictionaryTest, find_prefix_null) {
 
 
 // Helper functions for placing words in get_anchors() and get_move() tests
+void print_words(PlaceResult res, Move m){
+	std::cout << m.row + 1 << ' ' << m.column + 1 << ' ';
+	if (m.direction == Direction::ACROSS)
+		std::cout << "- ";
+	else
+		std::cout << "| ";
+	for (auto word : res.words)
+		std::cout << word << " ";
+	std::cout << std::endl;
+}
+
 void place_simple_word(Board &b) {
 	vector<TileKind> t;
     t.push_back(TileKind('H', 1));
@@ -576,6 +587,7 @@ TEST_F(ComputerPlayerTest, empty_no_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 8 8 - batons
 	test_pts(res, 19);
 }
 
@@ -599,6 +611,7 @@ TEST_F(ComputerPlayerTest, empty_with_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 8 8 - batons
 	test_pts(res, 19);
 }
 
@@ -620,6 +633,7 @@ TEST_F(ComputerPlayerTest, empty_no_multipliers_one_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 8 8 - faints
 	test_pts(res, 14);
 }
 
@@ -641,6 +655,7 @@ TEST_F(ComputerPlayerTest, empty_no_multipliers_two_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 8 8 - bastion
 	test_pts(res, 18);
 }
 
@@ -665,6 +680,7 @@ TEST_F(ComputerPlayerTest, simple_no_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 9 5 - ho in batons
 	test_pts(res, 31);
 }
 
@@ -689,6 +705,7 @@ TEST_F(ComputerPlayerTest, simple_no_multipliers_one_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 9 7 - ho in confab
 	test_pts(res, 29);
 }
 
@@ -713,6 +730,7 @@ TEST_F(ComputerPlayerTest, simple_with_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 7 6 - ah si boast
 	test_pts(res, 40);
 }
 
@@ -737,6 +755,7 @@ TEST_F(ComputerPlayerTest, simple_with_multipliers_one_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 6 10 | hit oaten
 	test_pts(res, 38);
 }
 
@@ -761,6 +780,7 @@ TEST_F(ComputerPlayerTest, two_words_no_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 2 7 | na sa batons
 	test_pts(res, 28);
 }
 
@@ -785,6 +805,7 @@ TEST_F(ComputerPlayerTest, two_words_no_multipliers_one_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 4 9 | an at fontina
 	test_pts(res, 24);
 }
 
@@ -809,6 +830,7 @@ TEST_F(ComputerPlayerTest, two_words_with_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 6 5 - sonata
 	test_pts(res, 39);
 }
 
@@ -833,6 +855,7 @@ TEST_F(ComputerPlayerTest, two_words_with_multipliers_one_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 6 10 | hit oaten
 	test_pts(res, 38);
 }
 
@@ -857,6 +880,7 @@ TEST_F(ComputerPlayerTest, long_no_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);		
+	// 7 7 - ob al si boas
 	test_pts(res, 32);
 }
 
@@ -881,6 +905,7 @@ TEST_F(ComputerPlayerTest, long_with_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 9 6 - bb lo it sabot
 	test_pts(res, 47);
 }
 
@@ -905,6 +930,7 @@ TEST_F(ComputerPlayerTest, concave_words_no_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 10 10 | se or sofa
 	test_pts(res, 29);
 }
 
@@ -929,6 +955,7 @@ TEST_F(ComputerPlayerTest, concave_words_no_multipliers_one_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 5 7 | ab ne jaunty or banjo
 	test_pts(res, 37);
 }
 
@@ -953,6 +980,7 @@ TEST_F(ComputerPlayerTest, concave_words_with_multipliers_no_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 11 12 | rf fatso
 	test_pts(res, 51);
 }
 
@@ -977,6 +1005,7 @@ TEST_F(ComputerPlayerTest, concave_words_with_multipliers_one_blank) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 5 7 | ab ne jaunty or banjo
 	test_pts(res, 57);
 }
 
@@ -1004,6 +1033,7 @@ TEST_F(ComputerPlayerTest, stress_test) {
 
 	Move m = cpu.get_move(b, d);
 	PlaceResult res = b.test_place(m);
+	// 3 10 | ma el se flamines
 	test_pts(res, 57);
 }
 
