@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.4)
 
 set(HW_NUMBER 7)
-set(IS_CHECKER FALSE)
+set(IS_CHECKER TRUE)
 
 message("########################################################")
 message("                 CS104 HW${HW_NUMBER} Test Suite")
@@ -79,7 +79,6 @@ add_subdirectory(testing_utils)
 
 add_subdirectory(bst_tests)
 add_subdirectory(avl_tests)
-add_subdirectory(sat_tests)
 
 if(NOT IS_CHECKER)
 	gen_grade_target()
