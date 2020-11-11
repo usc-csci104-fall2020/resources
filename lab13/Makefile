@@ -15,7 +15,7 @@ NumLeavesTest: $(BIN_DIR) $(BIN_DIR)/NumLeavesTest
 $(BIN_DIR)/EvenOddTest: $(BIN_DIR)/EvenOddTest.o $(BIN_DIR)/evenOdd.o
 	$(CC) $(CPPFLAGS) $^ $(GTEST_LL) -o $@
 
-$(BIN_DIR)/EvenOddTest.o: $(TEST_DIR)/EvenOddTest.cpp
+$(BIN_DIR)/EvenOddTest.o: $(TEST_DIR)/evenOddTest.cpp
 	$(CC) $(CPPFLAGS) -c $^ -o $@
 
 $(BIN_DIR)/evenOdd.o: evenOdd.cpp evenOdd.h
